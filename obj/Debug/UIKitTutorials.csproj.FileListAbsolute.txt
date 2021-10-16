@@ -1,0 +1,54 @@
+C:\Users\JEYDERHT\Desktop\C# - Professional\WPF - YouTube\UIKitTutorials\bin\Debug\UIKitTutorials.exe.config
+C:\Users\JEYDERHT\Desktop\C# - Professional\WPF - YouTube\UIKitTutorials\bin\Debug\UIKitTutorials.exe
+C:\Users\JEYDERHT\Desktop\C# - Professional\WPF - YouTube\UIKitTutorials\bin\Debug\UIKitTutorials.pdb
+C:\Users\JEYDERHT\Desktop\C# - Professional\WPF - YouTube\UIKitTutorials\obj\Debug\UIKitTutorials.csprojAssemblyReference.cache
+C:\Users\JEYDERHT\Desktop\C# - Professional\WPF - YouTube\UIKitTutorials\obj\Debug\MainWindow.g.cs
+C:\Users\JEYDERHT\Desktop\C# - Professional\WPF - YouTube\UIKitTutorials\obj\Debug\App.g.cs
+C:\Users\JEYDERHT\Desktop\C# - Professional\WPF - YouTube\UIKitTutorials\obj\Debug\UIKitTutorials_MarkupCompile.cache
+C:\Users\JEYDERHT\Desktop\C# - Professional\WPF - YouTube\UIKitTutorials\obj\Debug\UIKitTutorials_MarkupCompile.lref
+C:\Users\JEYDERHT\Desktop\C# - Professional\WPF - YouTube\UIKitTutorials\obj\Debug\MainWindow.baml
+C:\Users\JEYDERHT\Desktop\C# - Professional\WPF - YouTube\UIKitTutorials\obj\Debug\UIKitTutorials.g.resources
+C:\Users\JEYDERHT\Desktop\C# - Professional\WPF - YouTube\UIKitTutorials\obj\Debug\UIKitTutorials.Properties.Resources.resources
+C:\Users\JEYDERHT\Desktop\C# - Professional\WPF - YouTube\UIKitTutorials\obj\Debug\UIKitTutorials.csproj.GenerateResource.cache
+C:\Users\JEYDERHT\Desktop\C# - Professional\WPF - YouTube\UIKitTutorials\obj\Debug\UIKitTutorials.csproj.CoreCompileInputs.cache
+C:\Users\JEYDERHT\Desktop\C# - Professional\WPF - YouTube\UIKitTutorials\obj\Debug\UIKitTutorials.exe
+C:\Users\JEYDERHT\Desktop\C# - Professional\WPF - YouTube\UIKitTutorials\obj\Debug\UIKitTutorials.pdb
+C:\Users\JEYDERHT\Desktop\C# - Professional\WPF - YouTube\UIKitTutorials\obj\Debug\App.baml
+C:\Users\JEYDERHT\Desktop\C# - Professional\WPF - YouTube\UIKitTutorials\obj\Debug\Assets\Icons\Icons.baml
+C:\Users\JEYDERHT\Desktop\C# - Professional\WPF - YouTube\UIKitTutorials\obj\Debug\Themes\LightTheme.baml
+C:\Users\JEYDERHT\Desktop\C# - Professional\WPF - YouTube\UIKitTutorials\obj\Debug\Pages\HomePage.g.cs
+C:\Users\JEYDERHT\Desktop\C# - Professional\WPF - YouTube\UIKitTutorials\obj\Debug\Pages\HomePage.baml
+C:\Users\JEYDERHT\Desktop\C# - Professional\WPF - YouTube\UIKitTutorials\obj\Debug\Pages\NotesPage.g.cs
+C:\Users\JEYDERHT\Desktop\C# - Professional\WPF - YouTube\UIKitTutorials\obj\Debug\Pages\PaymentPage.g.cs
+C:\Users\JEYDERHT\Desktop\C# - Professional\WPF - YouTube\UIKitTutorials\obj\Debug\Pages\SoundsPage.g.cs
+C:\Users\JEYDERHT\Desktop\C# - Professional\WPF - YouTube\UIKitTutorials\obj\Debug\Pages\NotesPage.baml
+C:\Users\JEYDERHT\Desktop\C# - Professional\WPF - YouTube\UIKitTutorials\obj\Debug\Pages\PaymentPage.baml
+C:\Users\JEYDERHT\Desktop\C# - Professional\WPF - YouTube\UIKitTutorials\obj\Debug\Pages\SoundsPage.baml
+C:\Users\JEYDERHT\Desktop\C# - Professional\WPF - YouTube\UIKitTutorials\obj\Debug\Styles\MainStyle.baml
+D:\DownLoads\Edge\UIKitTutorials-main\UIKitTutorials-main\bin\Debug\UIKitTutorials.exe.config
+D:\DownLoads\Edge\UIKitTutorials-main\UIKitTutorials-main\bin\Debug\UIKitTutorials.exe
+D:\DownLoads\Edge\UIKitTutorials-main\UIKitTutorials-main\bin\Debug\UIKitTutorials.pdb
+D:\DownLoads\Edge\UIKitTutorials-main\UIKitTutorials-main\obj\Debug\UIKitTutorials.csproj.AssemblyReference.cache
+D:\DownLoads\Edge\UIKitTutorials-main\UIKitTutorials-main\obj\Debug\MainWindow.g.cs
+D:\DownLoads\Edge\UIKitTutorials-main\UIKitTutorials-main\obj\Debug\Pages\HomePage.g.cs
+D:\DownLoads\Edge\UIKitTutorials-main\UIKitTutorials-main\obj\Debug\Pages\NotesPage.g.cs
+D:\DownLoads\Edge\UIKitTutorials-main\UIKitTutorials-main\obj\Debug\Pages\PaymentPage.g.cs
+D:\DownLoads\Edge\UIKitTutorials-main\UIKitTutorials-main\obj\Debug\Pages\SoundsPage.g.cs
+D:\DownLoads\Edge\UIKitTutorials-main\UIKitTutorials-main\obj\Debug\App.g.cs
+D:\DownLoads\Edge\UIKitTutorials-main\UIKitTutorials-main\obj\Debug\UIKitTutorials_MarkupCompile.cache
+D:\DownLoads\Edge\UIKitTutorials-main\UIKitTutorials-main\obj\Debug\UIKitTutorials_MarkupCompile.lref
+D:\DownLoads\Edge\UIKitTutorials-main\UIKitTutorials-main\obj\Debug\App.baml
+D:\DownLoads\Edge\UIKitTutorials-main\UIKitTutorials-main\obj\Debug\Assets\Icons\Icons.baml
+D:\DownLoads\Edge\UIKitTutorials-main\UIKitTutorials-main\obj\Debug\MainWindow.baml
+D:\DownLoads\Edge\UIKitTutorials-main\UIKitTutorials-main\obj\Debug\Pages\HomePage.baml
+D:\DownLoads\Edge\UIKitTutorials-main\UIKitTutorials-main\obj\Debug\Pages\NotesPage.baml
+D:\DownLoads\Edge\UIKitTutorials-main\UIKitTutorials-main\obj\Debug\Pages\PaymentPage.baml
+D:\DownLoads\Edge\UIKitTutorials-main\UIKitTutorials-main\obj\Debug\Pages\SoundsPage.baml
+D:\DownLoads\Edge\UIKitTutorials-main\UIKitTutorials-main\obj\Debug\Styles\MainStyle.baml
+D:\DownLoads\Edge\UIKitTutorials-main\UIKitTutorials-main\obj\Debug\Themes\LightTheme.baml
+D:\DownLoads\Edge\UIKitTutorials-main\UIKitTutorials-main\obj\Debug\UIKitTutorials.g.resources
+D:\DownLoads\Edge\UIKitTutorials-main\UIKitTutorials-main\obj\Debug\UIKitTutorials.Properties.Resources.resources
+D:\DownLoads\Edge\UIKitTutorials-main\UIKitTutorials-main\obj\Debug\UIKitTutorials.csproj.GenerateResource.cache
+D:\DownLoads\Edge\UIKitTutorials-main\UIKitTutorials-main\obj\Debug\UIKitTutorials.csproj.CoreCompileInputs.cache
+D:\DownLoads\Edge\UIKitTutorials-main\UIKitTutorials-main\obj\Debug\UIKitTutorials.exe
+D:\DownLoads\Edge\UIKitTutorials-main\UIKitTutorials-main\obj\Debug\UIKitTutorials.pdb

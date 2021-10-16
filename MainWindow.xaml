@@ -1,0 +1,118 @@
+﻿<Window x:Class="NetworkTool.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:NetworkTool"
+        xmlns:vm="clr-namespace:NetworkTool.ViewModel"
+        mc:Ignorable="d" Name="home"
+        Title="MainView" Height="600" Width="850"
+        WindowStartupLocation="CenterScreen" WindowStyle="None"
+        Background="Transparent" AllowsTransparency="True"
+        DataContext="{DynamicResource MainViewModel}"
+        ResizeMode="NoResize" WindowState="Normal">
+    <Border CornerRadius="{Binding MainModel.CornerRadius}" MouseLeftButtonDown="Border_MouseLeftButtonDown"  Background="{DynamicResource PrimaryBackgroundColor}">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <!-- Start: GridColum Left-->
+            <Border CornerRadius="8 0 0 8" Background="{DynamicResource SecundaryBackgroundColor}" >
+                <Grid x:Name="gridMenu" Width="60">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="60"/>
+                        <RowDefinition Height="80"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    
+                    <!-- Logo -->
+                    <StackPanel Grid.Row="1" Orientation="Horizontal" VerticalAlignment="Top">
+                        <Path Data="{DynamicResource logo}" Margin="16 0 0 0" Stretch="Fill" Fill="{DynamicResource PrimaryBlueColor}" Width="25" Height="25" HorizontalAlignment="Left"/>
+                        <Label Content="200 OK" Foreground="{DynamicResource PrimaryBlueColor}" FontWeight="Bold" FontSize="20" VerticalAlignment="Center" HorizontalContentAlignment="Left" HorizontalAlignment="Left" Margin="14 0 0 0"/>
+                    </StackPanel>
+                    
+                    <!-- Menu -->
+                    <ToggleButton x:Name="btnMenu"  HorizontalAlignment="Right" BorderThickness="0" Background="Transparent" VerticalAlignment="Center" Style="{StaticResource MenuIconStyle}" Margin="0 0 15 0">
+                        <ToggleButton.Triggers>
+                            <EventTrigger RoutedEvent="ToggleButton.Unchecked">
+                                <BeginStoryboard>
+                                    <Storyboard x:Name="HideStackPanel">
+                                        <DoubleAnimation Storyboard.TargetName="gridMenu" Storyboard.TargetProperty="Width" BeginTime="0:0:0" From="200" To="60" Duration="0:0:0.1">
+                                        </DoubleAnimation>
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </EventTrigger>
+                            <EventTrigger RoutedEvent="ToggleButton.Checked">
+                                <BeginStoryboard>
+                                    <Storyboard x:Name="ShowStackPanel">
+                                        <DoubleAnimation Storyboard.TargetName="gridMenu" Storyboard.TargetProperty="Width" BeginTime="0:0:0" From="60" To="200" Duration="0:0:0.1">
+                                        </DoubleAnimation>
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </EventTrigger>
+                        </ToggleButton.Triggers>
+                    </ToggleButton>
+
+                    <StackPanel Grid.Row="3">
+                        <RadioButton x:Name="rdWelcome" IsChecked="True" Content="网络连接" Style="{DynamicResource MenuRadioButtonStyle}" Tag="{DynamicResource welcome}" Click="rdWelcome_Click"/>
+                        <RadioButton x:Name="rdPortal" Content="传送门" Style="{DynamicResource MenuRadioButtonStyle}" Tag="{DynamicResource portal}" Margin="0 5 0 5" Click="rdPortal_Click"/>
+                        <RadioButton x:Name="rdRequest" Content="参数设置" Style="{DynamicResource MenuRadioButtonStyle}" Tag="{DynamicResource request}" Click="rdRequest_Click"/>
+                        <RadioButton x:Name="rdSetting" Content="偏好设置" Style="{DynamicResource MenuRadioButtonStyle}" Tag="{DynamicResource setting}" Margin="0 5 0 5" Click="rdSetting_Click"/>
+                        <RadioButton x:Name="rdDeveloper" Content="开发者" Style="{DynamicResource MenuRadioButtonStyle}" Tag="{DynamicResource developer}" Margin="0 5 0 5" Click="rdDeveloper_Click"/>
+                    </StackPanel>
+
+                    <StackPanel Grid.Row="3" VerticalAlignment="Bottom" Orientation="Horizontal" Width="200" Margin="0 0 0 20">
+                        <Ellipse x:Name="Status" Width="25" Height="25" Margin="16 0 15 0" Fill="{Binding MainModel.StatusColor}">
+                            <!--#endregion-->
+                            <!--
+                            <Ellipse.Fill>
+                    
+                                <ImageBrush ImageSource="Assets/Avatars/avatar-2.jpg"/>
+                            </Ellipse.Fill>
+                            -->
+                            <!--#region -->
+                        </Ellipse>
+                        <Label Content="{Binding MainModel.StatusDescription}" x:Name="StatusLabel"  FontSize="14" FontWeight="Regular" HorizontalContentAlignment="Center" HorizontalAlignment="Left" />
+                    </StackPanel>
+                </Grid>
+            </Border>
+            <!-- End: GridColum Left-->
+            
+            <!-- Start: GridColumn Rigth -->
+            <Grid Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                
+                <!-- Start: Button Close | Restore | Minimize -->
+                <StackPanel Grid.Row="0" Grid.Column="4" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,5,10,0" Height="30" Orientation="Horizontal" FlowDirection="RightToLeft">
+                    <Button x:Name="btnClose" Style="{StaticResource IconButtonsStyle}" Content="{DynamicResource close}" Click="btnClose_Click"  Tag="IsCloseButton"/>
+                    <Button x:Name="btnRestore" Margin="5,0" Click="btnRestore_Click">
+                        <Button.Style>
+                            <Style TargetType="{x:Type Button}" BasedOn="{StaticResource IconButtonsStyle}">
+                                <Setter Property="Content" Value="{DynamicResource maximize}"/>
+                                <Style.Triggers>
+                                    <DataTrigger Binding="{Binding ElementName=home, Path=WindowState}" Value="Maximized">
+                                        <Setter Property="Content" Value="{DynamicResource restore}"/>
+                                    </DataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Button.Style>
+                    </Button>
+                    <Button x:Name="btnMinimize" Style="{DynamicResource IconButtonsStyle}" Content="{DynamicResource minimize}" Click="btnMinimize_Click"/>
+                </StackPanel>
+                <!-- End: Button Close | Restore | Minimize -->
+                
+                <Border Grid.Row="1" Margin="10">
+                    <Frame x:Name="PagesNavigation" NavigationUIVisibility="Hidden">
+                        <!-- Page Content -->
+                    </Frame>
+                </Border>
+            </Grid>
+            <!-- Start: GridColumn Rigth -->
+        </Grid>
+    </Border>
+</Window>

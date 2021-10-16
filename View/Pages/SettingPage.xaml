@@ -1,0 +1,77 @@
+﻿<Page x:Class="NetworkTool.View.Pages.SettingPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:pu="clr-namespace:Panuon.UI.Silver;assembly=Panuon.UI.Silver"
+      xmlns:Properties="clr-namespace:NetworkTool.Properties"
+      xmlns:local="clr-namespace:NetworkTool.View.Pages"
+      xmlns:vm="clr-namespace:NetworkTool.ViewModel"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="NotesPage">
+    <Page.DataContext>
+        <vm:SettingViewModel/>
+    </Page.DataContext>
+
+    <Border CornerRadius="{Binding SettingModel.CornerRadius}" Background="{DynamicResource SecundaryBackgroundColor}">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+            <Label Grid.Row="0" Content="基本设置" Margin="5" FontSize="18"></Label>
+            <StackPanel Orientation="Horizontal" Grid.Row="1">
+                <CheckBox x:Name="Boot_CheckBox"
+                          Margin="25 5 0 5"
+                          pu:CheckBoxHelper.HeaderWidth="*"
+                          pu:CheckBoxHelper.CheckedBackground="#5b7fff"
+                          pu:CheckBoxHelper.CheckBoxStyle="Switch"
+                          IsChecked="{Binding SettingModel.Boot}"
+                          Command="{Binding BootWithSystemCommand}" CommandParameter="{Binding RelativeSource={RelativeSource self}}"
+                          />
+                <Label Content="开机启动程序" FontSize="14" Margin="0 5" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Grid.Row="2">
+                <CheckBox x:Name="Link_CheckBox"
+                          Margin="25 5 0 5"
+                          pu:CheckBoxHelper.HeaderWidth="*"
+                          pu:CheckBoxHelper.CheckedBackground="#5b7fff"
+                          pu:CheckBoxHelper.CheckBoxStyle="Switch"
+                          IsChecked="{Binding SettingModel.Link}"
+                          Command="{Binding AutoLinkCommand}" CommandParameter="{Binding RelativeSource={RelativeSource self}}"
+                          />
+                <Label Content="开机自动连接校园网" FontSize="14" Margin="0 5" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Grid.Row="3">
+                <CheckBox x:Name="Shortcut_CheckBox"
+                          Margin="25 5 0 5"
+                          pu:CheckBoxHelper.HeaderWidth="*"
+                          pu:CheckBoxHelper.CheckedBackground="#5b7fff"
+                          pu:CheckBoxHelper.CheckBoxStyle="Switch"
+                          IsChecked="{Binding SettingModel.Shortcut}"
+                          Command="{Binding CreateShotcutCommand}" CommandParameter="{Binding RelativeSource={RelativeSource self}}"
+                          />
+                <Label Content="创建桌面快捷方式" FontSize="14" Margin="0 5" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Grid.Row="4">
+                <CheckBox x:Name="Corner_CheckBox"
+                          Margin="25 5 0 5"
+                          pu:CheckBoxHelper.HeaderWidth="*"
+                          pu:CheckBoxHelper.CheckedBackground="#5b7fff"
+                          pu:CheckBoxHelper.CheckBoxStyle="Switch"
+                          IsChecked="{Binding SettingModel.Corner}"
+                          Command="{Binding SetCornerCommand}" CommandParameter="{Binding RelativeSource={RelativeSource self}}"
+                          />
+                <Label Content="Windows11风格（窗体圆角化）" FontSize="14" Margin="0 5" />
+            </StackPanel>
+            <Label Grid.Row="5" Content="关于应用" Margin="5" FontSize="18"></Label>
+            <Label Grid.Row="6" Content="版本号 V.0.1.5" Margin="25 5 0 5" FontSize="14"/>
+        </Grid>
+    </Border>
+</Page>

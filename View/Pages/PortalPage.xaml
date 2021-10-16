@@ -1,0 +1,57 @@
+﻿<Page x:Class="NetworkTool.View.Pages.PortalPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:pu="clr-namespace:Panuon.UI.Silver;assembly=Panuon.UI.Silver"
+      xmlns:local="clr-namespace:NetworkTool.View.Pages"
+      xmlns:vm="clr-namespace:NetworkTool.ViewModel"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="PortalPage">
+    <Page.DataContext>
+        <vm:PortalViewModel/>
+    </Page.DataContext>
+
+    <Border CornerRadius="{Binding PortalModel.CornerRadius}" Background="{DynamicResource SecundaryBackgroundColor}">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Label Grid.Row="0" Content="传送门" FontSize="40" FontWeight="Bold" Foreground="Gray" VerticalContentAlignment="Bottom" HorizontalAlignment="Center" ></Label>
+            <Grid Grid.Row="1" >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="auto"/>
+                </Grid.ColumnDefinitions>
+                <TextBox 
+                     Grid.Column="0"
+                     Height="50"
+                     Margin="100 0 0 0"
+                     Text="{Binding PortalModel.CampusURL}"
+                     pu:TextBoxHelper.Header="http://"
+                     pu:TextBoxHelper.IsClearButtonVisible="True"
+                     pu:TextBoxHelper.Watermark="校园网认证IP地址（必填） 例如：10.0.251.18"
+                     pu:TextBoxHelper.CornerRadius="3" KeyDown="TextBox_KeyDown"
+                    >
+      
+                </TextBox>
+                <Button Grid.Column="1" Height="50" Width="100"  Margin="10 0 100 0"  
+                        Content="Open"
+                        Background="#5b7fff"
+                        pu:ButtonHelper.ButtonStyle="Standard"
+                        pu:ButtonHelper.HoverBrush="#4153a2"
+                        pu:ButtonHelper.CornerRadius="3"
+                        pu:ButtonHelper.ClickStyle="Sink"
+                        Command="{Binding OpenURLCommand}"
+                        >
+                </Button>
+            </Grid>
+            <Label Grid.Row="2" Content="朝辞白帝彩云间，千里江陵一日还" Foreground="Black" 
+               FontSize="18"  VerticalAlignment="Top" HorizontalAlignment="Center"
+               />
+        </Grid>
+    </Border>
+</Page>
